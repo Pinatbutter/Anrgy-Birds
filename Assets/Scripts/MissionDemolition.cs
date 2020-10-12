@@ -102,6 +102,11 @@ public class MissionDemolition : MonoBehaviour
         }
         StartLevel();
     }
+    public void SwitchLevel(int lvl)
+    {
+        level = lvl;
+        StartLevel();
+    }
 
     public void SwitchView(string eView = "")
     {                                    // c

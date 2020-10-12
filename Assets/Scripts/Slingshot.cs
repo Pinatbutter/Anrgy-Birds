@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Slingshot : MonoBehaviour
 {
@@ -13,7 +11,6 @@ public class Slingshot : MonoBehaviour
     [Header("Set in Inspector")]                                            // a
     public GameObject prefabProjectile;
     public float velocityMult = 8f;
-    public TMP_InputField inputField;
 
     // fields set dynamically
     [Header("Set Dynamically")]
@@ -70,10 +67,7 @@ public class Slingshot : MonoBehaviour
         projectileRigidbody = projectile.GetComponent<Rigidbody>();                // a
         projectileRigidbody.isKinematic = true;                                    // a
     }
-    void OnSkipTo1()
-    {
-        SceneManager.LoadScene("Level 1");
-    }
+
 
     void Update()
     {
