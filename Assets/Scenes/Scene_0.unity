@@ -1935,7 +1935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87a2b3543a4c9346bb01d9eb865a953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 1688686526437064396, guid: 202d0701a28540e4f9d82bf8f9017cfd, type: 3}
+  prefabProjectile: {fileID: 1688686526437064396, guid: b32269846c4e03644922b50ffd4766b7, type: 3}
   velocityMult: 10
   launchPoint: {fileID: 2003975284}
   launchPos: {x: 0, y: 0, z: 0}
