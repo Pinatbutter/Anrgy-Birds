@@ -25,6 +25,7 @@ public class Explosion : MonoBehaviour
         {
             Invoke("Detonate", fuse);
             hasExploded = true;
+            Invoke("getRidOf", fuse + 2.0f );
         }
 
     }
@@ -43,7 +44,11 @@ public class Explosion : MonoBehaviour
                 rb.AddExplosionForce(power, explosionPosition, radius, upForce, ForceMode.Impulse);
             }
         }
+        gameObject.GetComponent<Renderer>().enabled = false;
+    }
 
+    void getRidOf()
+    {
         Destroy(gameObject);
     }
 }
