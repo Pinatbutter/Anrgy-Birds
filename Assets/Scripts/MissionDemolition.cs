@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum GameMode
 {                                                         // b
@@ -21,7 +22,7 @@ public class MissionDemolition : MonoBehaviour
     public GameObject[] castles;   // An array of the castles
 
     [Header("Set Dynamically")]
-    public int level;     // The current level
+    public static int level;    // The current level
     public int levelMax;  // The number of levels
     public int shotsTaken;
     public GameObject castle;    // The current castle
@@ -33,7 +34,6 @@ public class MissionDemolition : MonoBehaviour
     {
         S = this; // Define the Singleton
 
-        level = 0;
         levelMax = castles.Length;
         StartLevel();
     }
@@ -91,6 +91,9 @@ public class MissionDemolition : MonoBehaviour
             // Start the next level in 2 seconds
             Invoke("NextLevel", 2f);
         }
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     void NextLevel()
@@ -102,11 +105,18 @@ public class MissionDemolition : MonoBehaviour
         }
         StartLevel();
     }
+
     public void SwitchLevel(int lvl)
     {
         level = lvl;
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void RestartLevel()
+    {
         StartLevel();
     }
+
 
     public void SwitchView(string eView = "")
     {                                    // c
