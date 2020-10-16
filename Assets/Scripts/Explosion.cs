@@ -12,12 +12,6 @@ public class Explosion : MonoBehaviour
     public float fuse = 10.0f;
     private bool hasExploded = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -49,6 +43,6 @@ public class Explosion : MonoBehaviour
 
     void getRidOf()
     {
-        Destroy(gameObject);
+        Destroy(bomb);
     }
 }

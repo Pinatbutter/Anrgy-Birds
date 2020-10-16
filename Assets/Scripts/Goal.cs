@@ -7,6 +7,9 @@ public class Goal : MonoBehaviour
 {
     // A static field accessible by code anywhere
     static public bool goalMet = false;
+    public float pigPop = 7.0f;
+    public GameObject popEffect;
+    public GameObject porker;
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,11 +19,22 @@ public class Goal : MonoBehaviour
         {
             // If so, set goalMet to true
             Goal.goalMet = true;
-            // Also set the alpha of the color to higher opacity
-            Material mat = GetComponent<Renderer>().material;
-            Color c = mat.color;
-            c.a = 1;
-            mat.color = c;
+            Instantiate(popEffect, transform.position, transform.rotation);
+            Destroy(porker);
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Vector3 velocity = collision.relativeVelocity;
+        if (velocity.magnitude > pigPop)
+        {
+            Goal.goalMet = true;
+            Instantiate(popEffect, transform.position, transform.rotation);
+            Destroy(porker);
+        }
+
+    }
+
+
 }

@@ -9,12 +9,14 @@ public class Slingshot : MonoBehaviour
 
     // fields set in the Unity Inspector pane
     [Header("Set in Inspector")]                                            // a
-    public GameObject prefabProjectile;
+    public GameObject prefabProjectileStandard;
+    public GameObject prefabProjectileBomb;
     public float velocityMult = 8f;
 
     // fields set dynamically
     [Header("Set Dynamically")]
 
+    public GameObject prefabProjectile;
     public GameObject launchPoint;
     public Vector3 launchPos;                                   // b
     public GameObject projectile;                                  // b
@@ -22,6 +24,18 @@ public class Slingshot : MonoBehaviour
 
     private Rigidbody projectileRigidbody;
 
+    public void swapAmmo(int proj_num)
+    {
+        if (proj_num == 0)
+        {
+            prefabProjectile = prefabProjectileStandard;
+        }
+        if (proj_num == 1)
+        {
+            prefabProjectile = prefabProjectileBomb;
+        }
+    }
+    
     static public Vector3 LAUNCH_POS
     {                                        // b
         get
