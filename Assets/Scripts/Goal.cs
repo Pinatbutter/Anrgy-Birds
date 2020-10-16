@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Goal : MonoBehaviour
 {
     // A static field accessible by code anywhere

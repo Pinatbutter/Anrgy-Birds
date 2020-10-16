@@ -483,7 +483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level: 0 of 2'
+  m_Text: 'Level: 0 of 12'
 --- !u!222 &637191885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692987199
 GameObject:
@@ -879,7 +879,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924315817
 GameObject:
@@ -979,7 +979,7 @@ RectTransform:
   - {fileID: 86550343}
   - {fileID: 1839174887}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1190,7 +1190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122042985
 GameObject:
@@ -1364,7 +1364,16 @@ MonoBehaviour:
   - {fileID: 955287495709430164, guid: b147b2daef8fa7043b4c24263c7d75b3, type: 3}
   - {fileID: 955287495709430164, guid: 00bc59ddd687d9443a8d5e162ecb1151, type: 3}
   - {fileID: 955287495709430164, guid: 8a9124a4ee4a24d44ab6311ad32c1721, type: 3}
-  levelMax: 0
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  levelMax: 12
   shotsTaken: 0
   castle: {fileID: 0}
   mode: 0
@@ -2180,7 +2189,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2003975284
 GameObject:

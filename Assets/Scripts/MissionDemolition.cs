@@ -30,12 +30,23 @@ public class MissionDemolition : MonoBehaviour
     public string showing = "Show Slingshot"; // FollowCam mode
 
 
+    public static bool hasBeenInitialized = false;
+    private static int[] lvlArray = new int[12];
+
     void Start()
     {
         S = this; // Define the Singleton
 
         levelMax = castles.Length;
         StartLevel();
+        if (hasBeenInitialized == false)
+        {
+            for (int i = 0; i < 12; i++)
+            {
+                lvlArray[i] = 13;
+            }
+            hasBeenInitialized = true;
+        }
     }
 
     void StartLevel()
@@ -79,6 +90,10 @@ public class MissionDemolition : MonoBehaviour
 
     void Update()
     {
+        if (Goal.goalMet)
+        {
+            lvlArray[level] = level;
+        }
         UpdateGUI();
 
         // Check for level end
@@ -92,6 +107,7 @@ public class MissionDemolition : MonoBehaviour
             Invoke("NextLevel", 2f);
         }
         if (Input.GetKeyDown(KeyCode.Escape)){
+            PlayerPrefsX.SetIntArray("levelPassed", lvlArray);
             SceneManager.LoadScene("Menu");
         }
     }
