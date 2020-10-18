@@ -52,6 +52,7 @@ public class Slingshot : MonoBehaviour
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
+        prefabProjectile = prefabProjectileStandard;
     }
 
     void OnMouseEnter()

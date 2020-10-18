@@ -90,6 +90,8 @@ public class MissionDemolition : MonoBehaviour
 
     void Update()
     {
+        Goal.checkPigs();
+
         if (Goal.goalMet)
         {
             lvlArray[level] = level;

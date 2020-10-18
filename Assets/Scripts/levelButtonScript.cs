@@ -24,7 +24,7 @@ public class levelButtonScript : MonoBehaviour
             if (PlayerPrefsX.GetIntArray("levelPassed")[i] != 13)
             {
                 colorBlue = levelButton[i].colors;
-                colorBlue.normalColor = Color.blue;
+                colorBlue.normalColor = Color.cyan;
                 colorBlue.highlightedColor = new Color32(115, 115, 255, 255);
                 levelButton[i].colors = colorBlue;
             }

@@ -35,11 +35,11 @@ public class WoodBreak : MonoBehaviour
     void breakdown()
     {
         bigWood.SetActive(false);
-        woodPiece1.transform.position = (bigWood.transform.position) + Vector3.up;
         woodPiece1.transform.rotation = (bigWood.transform.rotation);
+        woodPiece1.transform.position = (bigWood.transform.position) + Vector3.up;
         woodPiece1.SetActive(true);
-        woodPiece2.transform.position = (bigWood.transform.position) + Vector3.down;
         woodPiece2.transform.rotation = (bigWood.transform.rotation);
+        woodPiece2.transform.position = (bigWood.transform.position) + Vector3.down;
         woodPiece2.SetActive(true);
     }
 
