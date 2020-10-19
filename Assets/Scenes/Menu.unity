@@ -448,8 +448,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MissionDemolition, Assembly-CSharp
+      - m_Target: {fileID: 1122042992}
+        m_TargetAssemblyTypeName: MenuCamera, Assembly-CSharp
         m_MethodName: SwitchLevel
         m_Mode: 3
         m_Arguments:
@@ -949,8 +949,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MissionDemolition, Assembly-CSharp
+      - m_Target: {fileID: 1122042992}
+        m_TargetAssemblyTypeName: MenuCamera, Assembly-CSharp
         m_MethodName: SwitchLevel
         m_Mode: 3
         m_Arguments:
@@ -1529,8 +1529,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MissionDemolition, Assembly-CSharp
+      - m_Target: {fileID: 1122042992}
+        m_TargetAssemblyTypeName: MenuCamera, Assembly-CSharp
         m_MethodName: SwitchLevel
         m_Mode: 3
         m_Arguments:
@@ -1774,8 +1774,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MissionDemolition, Assembly-CSharp
+      - m_Target: {fileID: 1122042992}
+        m_TargetAssemblyTypeName: MenuCamera, Assembly-CSharp
         m_MethodName: SwitchLevel
         m_Mode: 3
         m_Arguments:
@@ -1942,6 +1942,8 @@ MonoBehaviour:
   levelButton:
   - {fileID: 2127213465}
   - {fileID: 1199821859}
+  - {fileID: 86550344}
+  - {fileID: 1847430500}
 --- !u!1 &955168135
 GameObject:
   m_ObjectHideFlags: 0
