@@ -7,8 +7,6 @@ public class DestroyWood : MonoBehaviour
 
     public int hitPoints = 1;
 
-    private bool broken = false;
-
     public GameObject woodPiece1;
 
     // Update is called once per frame
