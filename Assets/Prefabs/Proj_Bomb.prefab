@@ -227,7 +227,7 @@ MonoBehaviour:
   explosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   power: 50
   radius: 10
-  upForce: 0
+  upForce: 1
   fuse: 5
 --- !u!1 &7435615167565097057
 GameObject:
