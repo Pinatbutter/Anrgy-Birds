@@ -4,14 +4,18 @@ It consists of 12 different levels wich the user can progress through.
 
 Procrastination Penalty: Together we completed the 3 requirements for the Procrastination Penalty on time.
 
-The requirements each teammate contributed.
+The requirements each teammate contributed was 50% to 50%.
 
-  Diego: Menu Scene( Created buttons that change scene, saved passed levels, menu display, Music)
+Diego: 
+
+Menu Scene( Created buttons that change scene, saved passed levels, menu display, Music)
          
 Game Scene( Restart Button & Escape pressed, level passed, About half of the castles design, Music & sound effects)
+
          
-  Ethan: Menu Scene( Helped with Display,  Came up with name)
+  Ethan: 
+  
+Menu Scene( Helped with Display,  Came up with name)
 
 Game Scene( Did all visual effects, Did most castle desgins, Created a new Projectile and its code, Created big target, Different Materials )
-         
-Percentage worked by each teammate was 50% to 50%.
+ 
