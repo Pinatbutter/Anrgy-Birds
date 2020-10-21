@@ -19,7 +19,7 @@ public class levelButtonScript : MonoBehaviour
 
     private void checkLevelsPassed()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 12; i++)
         {
             if (PlayerPrefsX.GetIntArray("levelPassed")[i] != 13)
             {

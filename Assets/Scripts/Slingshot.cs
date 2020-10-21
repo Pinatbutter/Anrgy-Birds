@@ -12,6 +12,7 @@ public class Slingshot : MonoBehaviour
     public GameObject prefabProjectileStandard;
     public GameObject prefabProjectileBomb;
     public float velocityMult = 8f;
+    public AudioScript audioManager;
 
     // fields set dynamically
     [Header("Set Dynamically")]
@@ -23,15 +24,18 @@ public class Slingshot : MonoBehaviour
     public bool aimingMode;
 
     private Rigidbody projectileRigidbody;
+    private int projectileType;
 
     public void swapAmmo(int proj_num)
     {
         if (proj_num == 0)
         {
+            projectileType = 0;
             prefabProjectile = prefabProjectileStandard;
         }
         if (proj_num == 1)
         {
+            projectileType = 1;
             prefabProjectile = prefabProjectileBomb;
         }
     }
@@ -53,6 +57,7 @@ public class Slingshot : MonoBehaviour
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
         prefabProjectile = prefabProjectileStandard;
+        projectileType = 0;
     }
 
     void OnMouseEnter()
@@ -118,6 +123,10 @@ public class Slingshot : MonoBehaviour
             projectile = null;
             MissionDemolition.ShotFired();                             // a
             ProjectileLine.S.poi = projectile;                         // b
+            if (projectileType == 0)
+                audioManager.PlayStandardShot();
+            else
+                audioManager.PlayBombShot();
         }
     }
 }

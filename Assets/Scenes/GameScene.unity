@@ -1079,6 +1079,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800777919}
   m_CullTransparentMesh: 0
+--- !u!1001 &835334977
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477688, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763317929938477691, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+--- !u!114 &835334978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -663044735466411440, guid: a3fc30eb562f0bf43a75d761b9ff97eb, type: 3}
+  m_PrefabInstance: {fileID: 835334977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37d1b40a67b47343b6a7842700a8802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &838905679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1620,7 @@ GameObject:
   - component: {fileID: 1122042990}
   - component: {fileID: 1122042991}
   - component: {fileID: 1122042992}
+  - component: {fileID: 1122042993}
   m_Layer: 0
   m_Name: _MainCamera
   m_TagString: MainCamera
@@ -1718,11 +1787,28 @@ MonoBehaviour:
   - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
   - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
   - {fileID: 955287495709430164, guid: cae8723c129cded45bad1de7515998a9, type: 3}
+  audioManager: {fileID: 835334978}
   levelMax: 12
   shotsTaken: 0
   castle: {fileID: 0}
   mode: 0
   showing: Show Slingshot
+--- !u!114 &1122042993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122042985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2672eb5ee491f494eb7de45084bfa624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pigPop: 7
+  popEffect: {fileID: 224694163255572058, guid: 0dd4f5c3ce0486044b01a9b7ed4eb489, type: 3}
+  porker: {fileID: 4233466182968910141, guid: 2112b47208cb4ce43ba3c18f378835ac, type: 3}
+  audioManager: {fileID: 0}
 --- !u!1 &1139900171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,6 +2536,7 @@ MonoBehaviour:
   prefabProjectileStandard: {fileID: 1688686526437064396, guid: 202d0701a28540e4f9d82bf8f9017cfd, type: 3}
   prefabProjectileBomb: {fileID: 1688686526437064396, guid: b32269846c4e03644922b50ffd4766b7, type: 3}
   velocityMult: 10
+  audioManager: {fileID: 835334978}
   prefabProjectile: {fileID: 1688686526437064396, guid: 202d0701a28540e4f9d82bf8f9017cfd, type: 3}
   launchPoint: {fileID: 2003975284}
   launchPos: {x: 0, y: 0, z: 0}

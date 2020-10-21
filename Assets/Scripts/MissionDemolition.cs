@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public enum GameMode
@@ -20,6 +21,7 @@ public class MissionDemolition : MonoBehaviour
     public Text uitButton; // The Text on UIButton_View
     public Vector3 castlePos; // The place to put castles
     public GameObject[] castles;   // An array of the castles
+    public AudioScript audioManager;
 
     [Header("Set Dynamically")]
     public static int level;    // The current level
@@ -36,6 +38,7 @@ public class MissionDemolition : MonoBehaviour
     void Start()
     {
         S = this; // Define the Singleton
+        audioManager.PlayBackground();
 
         levelMax = castles.Length;
         StartLevel();
@@ -116,14 +119,22 @@ public class MissionDemolition : MonoBehaviour
 
     void NextLevel()
     {
-        level++;
-        if (level == levelMax)
+        audioManager.PlayYouWin();
+        if (level == (levelMax - 1))
         {
-            level = 0;
+            PlayerPrefsX.SetIntArray("levelPassed", lvlArray);
+            SceneManager.LoadScene("Menu");
         }
-        StartLevel();
+        else
+        {
+            level++;
+            StartLevel();
+        }
     }
-
+    public void getPop()
+    { 
+        audioManager.PlayBigPop();
+    }
     public void SwitchLevel(int lvl)
     {
         level = lvl;
@@ -132,6 +143,7 @@ public class MissionDemolition : MonoBehaviour
 
     public void RestartLevel()
     {
+        audioManager.PlayRestart();
         StartLevel();
     }
 
