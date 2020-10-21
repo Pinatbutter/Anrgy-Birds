@@ -11,8 +11,7 @@ public class Goal : MonoBehaviour
     public float pigPop = 7.0f;
     public GameObject popEffect;
     public GameObject porker;
-    public GameObject smallPop;
-    public GameObject bigPop;
+    public GameObject pop;
     //  This is commented out because this makes it to where a projectile simply has to 
     //  touch the pig without any applied force.
 
@@ -35,7 +34,7 @@ public class Goal : MonoBehaviour
         if (velocity.magnitude > pigPop)
         {
             //Goal.goalMet = true;
-            Instantiate(bigPop);
+            Instantiate(pop) ;
             Instantiate(popEffect, transform.position, transform.rotation);
             Destroy(porker);
         }

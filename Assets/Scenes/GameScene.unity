@@ -1780,12 +1780,12 @@ MonoBehaviour:
   - {fileID: 955287495709430164, guid: 8a9124a4ee4a24d44ab6311ad32c1721, type: 3}
   - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
   - {fileID: 955287495709430164, guid: 0ca8d67605aaaf94f94f51f7036bb9af, type: 3}
-  - {fileID: 955287495709430164, guid: 3448409677b02cc4cb41d41d6aa90f5b, type: 3}
   - {fileID: 955287495709430164, guid: 223cc2254dfadec4f92fa5e3a70c55d4, type: 3}
+  - {fileID: 955287495709430164, guid: 3448409677b02cc4cb41d41d6aa90f5b, type: 3}
   - {fileID: 955287495709430164, guid: 89a81eec1468d654f9c5bddcb2de8dd3, type: 3}
   - {fileID: 955287495709430164, guid: ccae45e10a42d09488bb66a180362835, type: 3}
-  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
-  - {fileID: 955287495709430164, guid: 995bda97543bce54c888ec8ce08e3aa0, type: 3}
+  - {fileID: 955287495709430164, guid: dce547b1a4542ca40b796d874fe2e051, type: 3}
+  - {fileID: 955287495709430164, guid: 789ba140386bb834eba00bebf7f15f07, type: 3}
   - {fileID: 955287495709430164, guid: cae8723c129cded45bad1de7515998a9, type: 3}
   audioManager: {fileID: 835334978}
   levelMax: 12
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   pigPop: 7
   popEffect: {fileID: 224694163255572058, guid: 0dd4f5c3ce0486044b01a9b7ed4eb489, type: 3}
   porker: {fileID: 4233466182968910141, guid: 2112b47208cb4ce43ba3c18f378835ac, type: 3}
-  audioManager: {fileID: 0}
+  pop: {fileID: 0}
 --- !u!1 &1139900171
 GameObject:
   m_ObjectHideFlags: 0

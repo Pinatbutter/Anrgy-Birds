@@ -14,6 +14,6 @@ public class MenuCamera : MonoBehaviour
     }
     void Start()
     {
-      //  audioManager.PlayBackground();
+        audioManager.PlayBackground();
     }
 }

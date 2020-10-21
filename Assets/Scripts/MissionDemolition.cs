@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+using System.Linq;
+
+// level 5 on pc. 8
 public enum GameMode
 {                                                         // b
     idle,
@@ -38,9 +41,10 @@ public class MissionDemolition : MonoBehaviour
     void Start()
     {
         S = this; // Define the Singleton
+        levelMax = castles.Length;
+
         audioManager.PlayBackground();
 
-        levelMax = castles.Length;
         StartLevel();
         if (hasBeenInitialized == false)
         {
@@ -50,8 +54,8 @@ public class MissionDemolition : MonoBehaviour
             }
             hasBeenInitialized = true;
         }
-    }
 
+    }
     void StartLevel()
     {
         // Get rid of the old castle if one exists
@@ -67,6 +71,7 @@ public class MissionDemolition : MonoBehaviour
             Destroy(pTemp);
         }
 
+        StartCoroutine(CastleSleepCoroutine());
         // Instantiate the new castle
         castle = Instantiate<GameObject>(castles[level]);
         castle.transform.position = castlePos;
@@ -82,6 +87,28 @@ public class MissionDemolition : MonoBehaviour
         UpdateGUI();
 
         mode = GameMode.playing;
+
+    }
+    IEnumerator CastleSleepCoroutine()
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        var walls = GameObject.FindGameObjectsWithTag("WallSimple");
+        var slabs = GameObject.FindGameObjectsWithTag("Slab");
+        var combined = walls.Concat(slabs);
+
+        foreach (var gameObj in combined)
+        {
+            Rigidbody rb = gameObj.GetComponent<Rigidbody>();
+            rb.Sleep();
+        }
+    }
+
+
+    public void RestartLevel()
+    {
+        audioManager.PlayRestart();
+        StartLevel();
     }
 
     void UpdateGUI()
@@ -131,20 +158,10 @@ public class MissionDemolition : MonoBehaviour
             StartLevel();
         }
     }
-    public void getPop()
-    { 
-        audioManager.PlayBigPop();
-    }
     public void SwitchLevel(int lvl)
     {
         level = lvl;
         SceneManager.LoadScene("GameScene");
-    }
-
-    public void RestartLevel()
-    {
-        audioManager.PlayRestart();
-        StartLevel();
     }
 
 
