@@ -13,9 +13,9 @@ Menu Scene( Created buttons that change scene, saved passed levels, menu display
 Game Scene( Restart Button & Escape pressed, level passed, About half of the castles design, Music & sound effects)
 
          
-  Ethan: 
+Ethan: 
   
 Menu Scene( Helped with Display,  Came up with name)
 
-Game Scene( Did all visual effects, Did most castle desgins, Created a new Projectile and its code, Created big target, Different Materials )
+Game Scene( Did all visual effects, Did most castle desgins, Created a new Projectile and its code, Created targets(pigs) and thier new behavior, Different Building Materials (Breakable blocks))
  
